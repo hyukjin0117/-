@@ -1,1 +1,1 @@
-idnex.html
+index.html
