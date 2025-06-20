@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>3D 모델링 갤러리 - Charlotte Modeling</title>
+  <style>
+    body {
+      font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+      background-color: #fff9f6;
+      margin: 0;
+      padding: 20px;
+    }
+    .gallery-container {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #1e3360;
+      margin-bottom: 40px;
+    }
+    .card-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .card {
+      background: #fff;
+      width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+   .card img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* 정사각형 비율 고정 */
+  object-fit: cover;   /* 넘치는 부분 잘라내고 꽉 채움 */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #1e3360;
+      margin-bottom: 5px;
+    }
+    .card-price {
+      color: #e29587;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .card-desc {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.4;
+      margin-bottom: 15px;
+    }
+    .request-link {
+      display: inline-block;
+      font-size: 0.9rem;
+      color: #e29587;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="gallery-container">
+    <h1>3D 모델링 갤러리</h1>
+    <div class="card-list">
+
+      <!-- 카드 1 -->
+      <div class="card">
+        <img src="https://media.sketchfab.com/models/eb4ba3c0d92349cfaf7361e4e55604f0/thumbnails/19abbc4d8b38401d9254b06ffd1ad81b/33a868baceb64b7abc450a5665fed7a5.jpeg" alt="캐릭터 베이직 모델링">
+        <div class="card-title">3D 캐릭터 베이직</div>
+        <div class="card-price">₩150,000~</div>
+        <div class="card-desc">게임용/피규어용 기본 구조 모델링<br>단순한 캐릭터 형태를 제작합니다.</div>
+        <a class="request-link" href="/request.html">REQUEST로 접수하기</a>
+      </div>
+
+      <!-- 카드 2 -->
+      <div class="card">
+        <img src="https://lh5.googleusercontent.com/proxy/k-GLsneBXHm6PcGv-jiZXefK7i2xbPK6aaxpaSYRy_a3bW0rtpSAoC3PqVs4cFAbFR4q5V52aKIupqALSmql19bLHqAQzFVyNaq3PT-lsP7jfnq-gFMUBYHp6IxX3fANLL-qeFARVLyXBuzhfbMo4usMwdjDy61isK_Jjfh4i-dYE_5OZDdECeQZ-_Pfbt5pbwXsA5qQS7A89N6y8WbgLaDVuH7ku80J" 풀컬러 하이폴 모델링>
+        <div class="card-title">V-Tuber전용 3D 캐릭터 제작</div>
+        <div class="card-price">₩250,000~</div>
+        <div class="card-desc">방송전용 모델링<br>다양한 표정,움직임 표현가능</div>
+        <a class="request-link" href="/request.html">REQUEST로 접수하기</a>
+      </div>
+
+      <!-- 카드 3 -->
+      <div class="card">
+        <img src="https://cdn.011st.com/11dims/resize/248/11src/product/8209031881/B.jpg?64547351" alt="3D 피규어 출력용 모델링">
+        <div class="card-title">3D 피규어 모델링</div>
+        <div class="card-price">₩200,000~</div>
+        <div class="card-desc">STL 포맷 제공, 출력 최적화된 모델<br>실물 제작을 위한 전용 설계</div>
+        <a class="request-link" href="/request.html">REQUEST로 접수하기</a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
