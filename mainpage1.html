@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charlotte Modeling</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fffaf7;
+      margin: 0;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 50px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 15px;
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .logo img {
+      cursor: pointer;
+    }
+
+    .buttons {
+      margin: 40px 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .btn {
+      padding: 15px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #f3f3f3;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #e0e0e0;
+    }
+
+    .characters {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      margin-top: 40px;
+    }
+
+    .characters img {
+      height: 150px;
+      width: 180px;
+    }
+
+    .characters img.fit-button {
+      width: 220px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div>
+      <a href="https://hyukjin0117.github.io/-/2d%20model.html">2D Modeling</a>
+      <a href="https://hyukjin0117.github.io/-/3D MODELING.HTML">3D Modeling</a>
+    </div>
+    <div>
+      <a href="https://hyukjin0117.github.io/-/mix.html">About Us</a>
+      <a href="https://hyukjin0117.github.io/-/login2.html">Sign In</a>
+    </div>
+  </nav>
+
+  <!-- Logo -->
+  <div class="logo">
+    <img id="logo-img" src="https://sdmntprwestus.oaiusercontent.com/files/00000000-d1a4-6230-9ce8-991e17063371/raw?se=2025-06-20T12%3A17%3A44Z&sp=r&sv=2024-08-04&sr=b&scid=6ef43566-815a-5c97-a120-c433e941d288&skoid=ea0c7534-f237-4ccd-b7ea-766c4ed977ad&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-06-20T07%3A01%3A56Z&ske=2025-06-21T07%3A01%3A56Z&sks=b&skv=2024-08-04&sig=QpvqgBJ2Bl2Mvh%2B8JrvrezpDsfyICoWA9pKUzuNT6Gk%3D" width="400" height="320" />
+  </div>
+
+  <!-- Buttons -->
+  <div class="buttons">
+    <button class="btn" onclick="location.href='/requestmodeling'">2D/3D MODELING REQUEST</button>
+    <button class="btn" onclick="location.href='/requestgoods'">GOODS REQUEST</button>
+  </div>
+
+  <!-- Characters -->
+  <div class="characters">
+    <img class="fit-button" src="https://static.cdn.kmong.com/gigs/A7T3D1627618793.jpg" alt="lion 3d Modeling" />
+    <img src="https://dox32iqs6me69.cloudfront.net/20250429_images_20250429_190726/[Genshin_Official]_Destiny_Day_Series_Outfit_-_Mondstadt_23/option9.jpg" alt="klee GOODS" />
+  </div>
+
+  <!-- Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let clickCount = 0;
+      const logoImage = document.getElementById('logo-img');
+
+      logoImage.addEventListener('click', () => {
+        clickCount++;
+        if (clickCount >= 5) {
+          window.location.href = 'https://hyukjin0117.github.io/-/login.adminn.html'; // ✅ 올바른 .html 확장자
+        }
+      });
+    });
+  </script>
+</body>
+</html>
