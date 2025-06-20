@@ -3,131 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swiper Full Screen Image</title>
+    <title>Swiper Full Screen</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden; /* Prevent scrolling if content overflows */
-        }
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; }
 
-        /* Swiper Container */
-        .swiper {
-            width: 100%; /* Make the swiper container take full width */
-            height: 100vh; /* Make the swiper container take full viewport height */
-            /* You can adjust height: 100vh; to a fixed pixel value or a percentage relative to a parent if preferred */
-        }
-
-        /* Swiper Slide */
+        .swiper { width: 100%; height: 100vh; }
         .swiper-slide {
             position: relative;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 100%;
-            height: 100%; /* Make each slide take full height of the swiper container */
-            display: flex; /* Use flexbox to center content */
-            align-items: center; /* Vertically center content */
-            justify-content: center; /* Horizontally center content */
-            overflow: hidden; /* Hide overflow for images that are object-fit cover */
+            height: 100%;
+            overflow: hidden;
+            text-align: center; /* Ensures caption is centered if it spans less than 100% */
         }
+        .swiper-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
-        /* Image within Swiper Slide */
-        .swiper-slide img {
-            display: block;
-            width: 100%;
-            height: 100%; /* Make the image take full height of the slide */
-            object-fit: cover; /* Ensure the image fills the area, potentially cropping it to fit */
-            /* Use 'contain' if you want the entire image to be visible without cropping,
-               but this might leave empty space if aspect ratios don't match. */
-        }
-
-        /* Caption Styling */
         .slide-caption {
             position: absolute;
-            bottom: 10%; /* Distance from the bottom */
-            left: 5%; /* Distance from the left */
-            background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
-            color: #fff; /* White text color */
+            bottom: 10%;
+            left: 5%;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
             padding: 20px;
             border-radius: 10px;
-            width: 90%; /* Adjust width of the caption to be 90% of the slide */
-            max-width: 500px; /* Optional: limit max width for better readability on very wide screens */
-            box-sizing: border-box; /* Include padding in width calculation */
-            text-align: left; /* Align text within the caption */
-            z-index: 10; /* Ensure caption is above the image */
+            width: 90%;
+            max-width: 500px;
+            box-sizing: border-box;
+            text-align: left;
+            z-index: 10;
         }
-
-        .slide-caption h3 {
-            margin-top: 0;
-            font-size: 1.8em; /* Adjust heading size */
-            margin-bottom: 10px;
-        }
-
-        .slide-caption p {
-            font-size: 1.1em; /* Adjust paragraph size */
-            margin-bottom: 15px;
-        }
+        .slide-caption h3 { margin-top: 0; font-size: 1.8em; margin-bottom: 10px; }
+        .slide-caption p { font-size: 1.1em; margin-bottom: 15px; }
 
         .slide-btn {
             display: inline-block;
             margin-top: 10px;
-            padding: 10px 20px; /* Larger padding for button */
-            background: #e29587; /* Button background color */
+            padding: 10px 20px;
+            background: #e29587;
             color: white;
             text-decoration: none;
             border-radius: 6px;
-            transition: background 0.3s ease; /* Smooth transition for hover effect */
+            transition: background 0.3s ease;
+        }
+        .slide-btn:hover { background: #c77b6c; }
+
+        .swiper-button-next, .swiper-button-prev {
+            color: #fff;
+            filter: drop-shadow(0 0 5px rgba(0,0,0,0.7));
+            --swiper-navigation-size: 30px;
         }
 
-        .slide-btn:hover {
-            background: #c77b6c; /* Darker background on hover */
-        }
-
-        /* Swiper Navigation Arrows */
-        .swiper-button-next,
-        .swiper-button-prev {
-            color: #fff; /* White arrows */
-            filter: drop-shadow(0 0 5px rgba(0,0,0,0.7)); /* Shadow for better visibility on bright images */
-            --swiper-navigation-size: 30px; /* Adjust arrow size */
-        }
-
-        /* Responsive adjustments for smaller screens */
+        /* Responsive */
         @media (max-width: 768px) {
-            .slide-caption {
-                bottom: 5%; /* Closer to the bottom on small screens */
-                left: 2%;
-                width: 96%;
-                padding: 15px;
-            }
-            .slide-caption h3 {
-                font-size: 1.5em;
-            }
-            .slide-caption p {
-                font-size: 0.9em;
-            }
-            .slide-btn {
-                padding: 8px 15px;
-            }
+            .slide-caption { bottom: 5%; left: 2%; width: 96%; padding: 15px; }
+            .slide-caption h3 { font-size: 1.5em; }
+            .slide-caption p { font-size: 0.9em; }
+            .slide-btn { padding: 8px 15px; }
         }
-
         @media (max-width: 480px) {
-            .slide-caption {
-                bottom: 2%;
-                padding: 10px;
-            }
-            .slide-caption h3 {
-                font-size: 1.2em;
-            }
-            .slide-caption p {
-                font-size: 0.8em;
-            }
-            .slide-btn {
-                font-size: 0.8em;
-            }
+            .slide-caption { bottom: 2%; padding: 10px; }
+            .slide-caption h3 { font-size: 1.2em; }
+            .slide-caption p { font-size: 0.8em; }
+            .slide-btn { font-size: 0.8em; }
         }
-
     </style>
 </head>
 <body>
@@ -172,18 +113,15 @@
     <script>
         var swiper = new Swiper(".mySwiper", {
             autoplay: {
-                delay: 4000, // 4 seconds delay for autoplay
-                disableOnInteraction: false, // Continue autoplay even after user interaction
+                delay: 4000,
+                disableOnInteraction: false,
             },
-            loop: true, // Enable loop mode for continuous sliding
+            loop: true,
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
-            pagination: { // Optional: Add pagination dots
-                el: ".swiper-pagination",
-                clickable: true,
-            },
+            // pagination: { el: ".swiper-pagination", clickable: true, }, // 페이지네이션 점을 원하시면 주석 해제
         });
     </script>
 </body>
