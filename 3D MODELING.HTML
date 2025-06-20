@@ -2,122 +2,110 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2D 모델링 갤러리 - Charlotte Modeling</title>
+  <title>3D 모델링 갤러리 - Charlotte Modeling</title>
   <style>
     body {
       font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
-      margin: 0;
       background-color: #fff9f6;
+      margin: 0;
+      padding: 20px;
     }
-    .container {
+    .gallery-container {
       max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin: 60px auto;
+      padding: 20px;
     }
     h1 {
-      color: #1e3360;
       text-align: center;
+      color: #1e3360;
       margin-bottom: 40px;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 30px;
-    }
-    .item {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      overflow: hidden;
+    .card-list {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
     }
-    .item img {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
+    .card {
+      background: #fff;
+      width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
     }
-    .details {
-      padding: 16px;
-    }
-    .details h2 {
+   .card img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* 정사각형 비율 고정 */
+  object-fit: cover;   /* 넘치는 부분 잘라내고 꽉 채움 */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+    .card-title {
       font-size: 1.1rem;
-      color: #1e3360;
-      margin: 0 0 8px;
-    }
-    .price {
       font-weight: bold;
-      color: #e29587;
-      margin-bottom: 12px;
+      color: #1e3360;
+      margin-bottom: 5px;
     }
-    .desc {
-      font-size: 0.9rem;
-      color: #555;
-      line-height: 1.5;
+    .card-price {
+      color: #e29587;
+      font-weight: bold;
       margin-bottom: 10px;
     }
-    .request-note {
-      background-color: #fceeee;
-      padding: 10px;
-      border-top: 1px solid #f3dcdc;
-      text-align: center;
-      font-size: 0.85rem;
-      color: #c15656;
+    .abcd{
+      text-decoration: none;
     }
-    .request-note a {
+    .card-desc {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.4;
+      margin-bottom: 15px;
+    }
+    .request-link {
+      display: inline-block;
+      font-size: 0.9rem;
       color: #e29587;
+      font-weight: bold;
+      text-align: center;
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>2D 모델링 갤러리</h1>
-    <div class="grid">
 
-      <
-      <div class="item">
-        <img src="https://upload-os-bbs.hoyolab.com/upload/2024/08/26/190738668/99d97fb7245506f3b79edd7aa92191d7_4409383259923876732.jpg" alt="SD 캐릭터">
-        <div class="details">
-          <h2>SD 캐릭터 일러스트</h2>
-          <div class="price">₩50,000~</div>
-          <div class="desc">작고 귀여운 SD 스타일 전신 캐릭터 일러스트입니다.<br> 트위치/유튜브/굿즈 등 다양한 용도로 활용할 수 있습니다.</div>
-        </div>
-        <div class="request-note">
-          해당 작업을 의뢰하고 싶으신가요?<br>
-          메인 페이지의 <a href="https://hyukjin0117.github.io/-//REQUEST1.HTML">REQUEST</a> 버튼을 통해 접수해 주세요!
-        </div>
-      </div>    
-  
-      
-      <div class="item">
-        <img src="https://tse2.mm.bing.net/th/id/OIP.h9Q3-LWEOm-CB8g0LJgvnwHaK6?w=474&h=474&c=7" alt="2D 예시2">
-        <div class="details">
-          <h2>상반신 일러스트</h2>
-          <div class="price">₩100,000~</div>
-           <div class="desc">개인 방송이나 SNS 프로필용으로 적합한 상반신 캐릭터 일러스트입니다.<br> 트위치/유튜브/굿즈 등 다양한 용도로 활용할 수 있습니다
-          </div>
-        </div>
-        <div class="request-note">
-          해당 작업을 의뢰하고 싶으신가요?<br>
-          메인 페이지의 <a href="https://hyukjin0117.github.io/-//REQUEST1.HTML">REQUEST</a> 버튼을 통해 접수해 주세요!
-        </div>
+  <div class="gallery-container">
+    <h1>3D 모델링 갤러리</h1>
+    <div class="card-list">
+
+      <!-- 카드 1 -->
+      <div class="card">
+        <img src="https://media.sketchfab.com/models/eb4ba3c0d92349cfaf7361e4e55604f0/thumbnails/19abbc4d8b38401d9254b06ffd1ad81b/33a868baceb64b7abc450a5665fed7a5.jpeg" alt="캐릭터 베이직 모델링">
+        <div class="card-title"><a  class ="abcd" href="https://hyukjin0117.github.io/-/3D%20MODELING1.HTML">3D 캐릭터 베이직</a></div>
+        <div class="card-price">₩150,000~</div>
+        <div class="card-desc">게임용/피규어용 기본 구조 모델링<br>단순한 캐릭터 형태를 제작합니다.</div>
+        <a class="request-link" href="https://hyukjin0117.github.io/-//REQUEST1.HTML">REQUEST로 접수하기</a>
       </div>
 
-     
-      <div class="item">
-        <img src="https://i.namu.wiki/i/KMAvDmFcamWfxsm5Z-TUGD9mK7BOg5LvQuag4qsdzOP9-iX70lFtOOJusNYlO83gQojVGxn1StKkB4ygh86Emg.webp" alt="2D 예시3">
-              <div class="details">
-          <h2>배경포함 일러스트</h2>
-          <div class="price">₩150,000~</div>
-          <div class="desc">팬아트로 적합한 배경작업 까지 포함된 일러스트입니다<br> 트위치/유튜브/굿즈 등 다양한 용도로 활용할 수 있습니다.</div>
-        </div>
-        <div class="request-note">
-          해당 작업을 의뢰하고 싶으신가요?<br>
-          메인 페이지의 <a href="https://hyukjin0117.github.io/-//REQUEST1.HTML">REQUEST</a> 버튼을 통해 접수해 주세요!
-        </div>
-      </div>    
+      <!-- 카드 2 -->
+      <div class="card">
+        <img src="https://lh5.googleusercontent.com/proxy/k-GLsneBXHm6PcGv-jiZXefK7i2xbPK6aaxpaSYRy_a3bW0rtpSAoC3PqVs4cFAbFR4q5V52aKIupqALSmql19bLHqAQzFVyNaq3PT-lsP7jfnq-gFMUBYHp6IxX3fANLL-qeFARVLyXBuzhfbMo4usMwdjDy61isK_Jjfh4i-dYE_5OZDdECeQZ-_Pfbt5pbwXsA5qQS7A89N6y8WbgLaDVuH7ku80J" 풀컬러 하이폴 모델링>
+        <div class="card-title"><a  class ="abcd" href="https://hyukjin0117.github.io/-/3D%20MODELING2.HTML">V-Tuber전용 3D 캐릭터 제작</a></div>
+        <div class="card-price">₩250,000~</div>
+        <div class="card-desc">방송전용 모델링<br>다양한 표정,움직임 표현가능</div>
+        <a class="request-link" href="https://hyukjin0117.github.io/-//REQUEST1.HTML">REQUEST로 접수하기</a>
+      </div>
+
+      <!-- 카드 3 -->
+      <div class="card">
+        <img src="https://cdn.011st.com/11dims/resize/248/11src/product/8209031881/B.jpg?64547351" alt="3D 피규어 출력용 모델링">
+        <div class="card-title"><a  class ="abcd" href="https://hyukjin0117.github.io/-/3D%20MODELING3.HTML">3D 피규어 모델링</a></div>
+        <div class="card-price">₩200,000~</div>
+        <div class="card-desc">STL 포맷 제공, 출력 최적화된 모델<br>실물 제작을 위한 전용 설계</div>
+        <a class="request-link" href="https://hyukjin0117.github.io/-//REQUEST1.HTML">REQUEST로 접수하기</a>
+      </div>
+
+    </div>
   </div>
+
 </body>
 </html>
