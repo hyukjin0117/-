@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>의뢰 목록 - Charlotte Modeling Admin</title>
+  <style>
+    body {
+      font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+      background-color: #fff9f6;
+      padding: 40px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #1e3360;
+      margin-bottom: 30px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+    }
+    th {
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    a.detail-link {
+      color: #e29587;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a.detail-link:hover {
+      text-decoration: underline;
+    }
+    .status {
+      font-weight: bold;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+    .진행중 { background-color: #fff3cd; color: #856404; }
+    .완료 { background-color: #d4edda; color: #155724; }
+    .미확인 { background-color: #f8d7da; color: #721c24; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>의뢰 목록</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>의뢰자</th>
+          <th>이메일</th>
+          <th>요청 항목</th>
+          <th>요청일</th>
+          <th>진행 상태</th>
+          <th>상세 보기</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>홍길동</td>
+          <td>hong123@email.com</td>
+          <td>2D 상반신 일러스트</td>
+          <td>2025-05-01</td>
+          <td><span class="status 진행중">진행중</span></td>
+          <td><a class="detail-link" href="request-detail1.html">보기</a></td>
+        </tr>
+        <tr>
+          <td>김예린</td>
+          <td>yerin.kim@email.com</td>
+          <td>굿즈 제작 - 스티커</td>
+          <td>2025-04-30</td>
+          <td><span class="status 미확인">미확인</span></td>
+          <td><a class="detail-link" href="request-detail2.html">보기</a></td>
+        </tr>
+        <tr>
+          <td>이도현</td>
+          <td>dohyunnn@email.com</td>
+          <td>3D 캐릭터 모델링</td>
+          <td>2025-04-28</td>
+          <td><span class="status 완료">완료</span></td>
+          <td><a class="detail-link" href="request-detail3.html">보기</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
