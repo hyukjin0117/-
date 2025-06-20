@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>의뢰 결과 기록 - Charlotte Modeling Admin</title>
+  <style>
+    body {
+      font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+      background-color: #fff9f6;
+      padding: 40px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #1e3360;
+      margin-bottom: 30px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+      vertical-align: top;
+    }
+    th {
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    textarea, input[type="text"], input[type="url"] {
+      width: 100%;
+      padding: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+    input[type="file"] {
+      border: none;
+    }
+    button {
+      padding: 8px 18px;
+      border: none;
+      background-color: #e29587;
+      color: white;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #d3786e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>의뢰 결과 작성</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>의뢰자</th>
+          <th>완성 설명</th>
+          <th>사용 도구</th>
+          <th>결과물 링크/파일</th>
+          <th>내부 메모</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>홍길동</td>
+          <td><textarea rows="3" placeholder="상반신 일러스트, 클라이언트 요청 반영 완료"></textarea></td>
+          <td><input type="text" placeholder="Clip Studio, Photoshop 등" /></td>
+          <td>
+            <input type="url" placeholder="작업물 링크 (또는)" /><br/><br/>
+            <input type="file" />
+          </td>
+          <td><textarea rows="2" placeholder="내부용 참고 메모"></textarea></td>
+        </tr>
+        <tr>
+          <td>김예린</td>
+          <td><textarea rows="3" placeholder="스티커용 캐릭터 3종 세트 제작 완료"></textarea></td>
+          <td><input type="text" placeholder="Illustrator" /></td>
+          <td>
+            <input type="url" placeholder="작업물 링크 (또는)" /><br/><br/>
+            <input type="file" />
+          </td>
+          <td><textarea rows="2"></textarea></td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <div style="text-align: right;">
+      <button>저장하기</button>
+    </div>
+  </div>
+</body>
+</html>
