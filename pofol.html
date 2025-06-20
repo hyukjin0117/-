@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper Full Screen</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <style>
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; }
+
+        .swiper { width: 100%; height: 100vh; }
+        .swiper-slide {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            text-align: center; /* Ensures caption is centered if it spans less than 100% */
+        }
+        .swiper-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+        .slide-caption {
+            position: absolute;
+            bottom: 10%;
+            left: 5%;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            box-sizing: border-box;
+            text-align: left;
+            z-index: 10;
+        }
+        .slide-caption h3 { margin-top: 0; font-size: 1.8em; margin-bottom: 10px; }
+        .slide-caption p { font-size: 1.1em; margin-bottom: 15px; }
+
+        .slide-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #e29587;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+        .slide-btn:hover { background: #c77b6c; }
+
+        .swiper-button-next, .swiper-button-prev {
+            color: #fff;
+            filter: drop-shadow(0 0 5px rgba(0,0,0,0.7));
+            --swiper-navigation-size: 30px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .slide-caption { bottom: 5%; left: 2%; width: 96%; padding: 15px; }
+            .slide-caption h3 { font-size: 1.5em; }
+            .slide-caption p { font-size: 0.9em; }
+            .slide-btn { padding: 8px 15px; }
+        }
+        @media (max-width: 480px) {
+            .slide-caption { bottom: 2%; padding: 10px; }
+            .slide-caption h3 { font-size: 1.2em; }
+            .slide-caption p { font-size: 0.8em; }
+            .slide-btn { font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <img src="https://media.sketchfab.com/models/eb4ba3c0d92349cfaf7361e4e55604f0/thumbnails/19abbc4d8b38401d9254b06ffd1ad81b/33a868baceb64b7abc450a5665fed7a5.jpeg" alt="클레 3D">
+                <div class="slide-caption">
+                    <h3>3D 모델링 - 클레</h3>
+                    <p>원신의 캐릭터 클레를 3D 모델링으로 구현했습니다.</p>
+                    <a href="https://sketchfab.com/3d-models/genshin-impact-klee-3d-model-eb4ba3c0d92349cfaf7361e4e55604f0" target="_blank" class="slide-btn">자세히 보기</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="https://upload-os-bbs.hoyolab.com/upload/2024/08/26/190738668/99d97fb7245506f3b79edd7aa92191d7_4409383259923876732.jpg?x-oss-process=image%2Fresize%2Cs_1000%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp%2Fquality%2Cq_70" alt="SD 일러스트">
+                <div class="slide-caption">
+                    <h3>SD 일러스트</h3>
+                    <p>프로필용 고화질 SD 일러스트 작품입니다.</p>
+                    <a href="#" class="slide-btn">자세히 보기</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="https://ac-p3.namu.la/20211224s1/2d8af9790910904c89f73c4d76c5cce64dd5f0d2c54f3259d99d546eb19f2282.mp4.gif?expires=1750414793&key=L4GMNN91O4WXCvuWKBu-4Q" alt="V-tuber 모델링">
+                <div class="slide-caption">
+                    <h3>V-tuber 전용 모델링</h3>
+                    <p>방송 및 굿즈 제작에 활용 가능한 V-tuber 전용 고품질 모델링입니다.</p>
+                    <a href="#" class="slide-btn">자세히 보기</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            // pagination: { el: ".swiper-pagination", clickable: true, }, // 페이지네이션 점을 원하시면 주석 해제
+        });
+    </script>
+</body>
+</html>
