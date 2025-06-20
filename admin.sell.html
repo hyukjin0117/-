@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>판매창 등록 - 관리자</title>
+  <style>
+    body {
+      font-family: 'Pretendard', sans-serif;
+      background: #f8f8f8;
+      padding: 40px;
+    }
+    .form-container {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 { color: #1e3360; margin-bottom: 20px; }
+    label { display: block; margin-top: 15px; font-weight: bold; }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 25px;
+      padding: 12px 20px;
+      background: #e29587;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    button:hover { background: #c77b6c; }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>판매창 등록</h2>
+    <form action="submit_url" method="POST">
+      <label>상품명</label>
+      <input type="text" name="title" required>
+
+      <label>카테고리</label>
+      <select name="category" required>
+        <option value="">-- 선택 --</option>
+        <option value="2D">2D</option>
+        <option value="3D">3D</option>
+        <option value="굿즈">굿즈</option>
+      </select>
+
+      <label>가격 (₩)</label>
+      <input type="number" name="price" required>
+
+      <label>설명</label>
+      <textarea name="description" rows="5" required></textarea>
+
+      <label>썸네일 이미지 URL</label>
+      <input type="url" name="image_url" required>
+
+      <label>상세 페이지 링크</label>
+      <input type="url" name="detail_url" required>
+
+      <button type="submit">등록하기</button>
+    </form>
+  </div>
+
+</body>
+</html>
