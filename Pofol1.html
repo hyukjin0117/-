@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper Full Screen Image</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Prevent scrolling if content overflows */
+        }
+
+        /* Swiper Container */
+        .swiper {
+            width: 100%; /* Make the swiper container take full width */
+            height: 100vh; /* Make the swiper container take full viewport height */
+            /* You can adjust height: 100vh; to a fixed pixel value or a percentage relative to a parent if preferred */
+        }
+
+        /* Swiper Slide */
+        .swiper-slide {
+            position: relative;
+            text-align: center;
+            width: 100%;
+            height: 100%; /* Make each slide take full height of the swiper container */
+            display: flex; /* Use flexbox to center content */
+            align-items: center; /* Vertically center content */
+            justify-content: center; /* Horizontally center content */
+            overflow: hidden; /* Hide overflow for images that are object-fit cover */
+        }
+
+        /* Image within Swiper Slide */
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%; /* Make the image take full height of the slide */
+            object-fit: cover; /* Ensure the image fills the area, potentially cropping it to fit */
+            /* Use 'contain' if you want the entire image to be visible without cropping,
+               but this might leave empty space if aspect ratios don't match. */
+        }
+
+        /* Caption Styling */
+        .slide-caption {
+            position: absolute;
+            bottom: 10%; /* Distance from the bottom */
+            left: 5%; /* Distance from the left */
+            background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+            color: #fff; /* White text color */
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%; /* Adjust width of the caption to be 90% of the slide */
+            max-width: 500px; /* Optional: limit max width for better readability on very wide screens */
+            box-sizing: border-box; /* Include padding in width calculation */
+            text-align: left; /* Align text within the caption */
+            z-index: 10; /* Ensure caption is above the image */
+        }
+
+        .slide-caption h3 {
+            margin-top: 0;
+            font-size: 1.8em; /* Adjust heading size */
+            margin-bottom: 10px;
+        }
+
+        .slide-caption p {
+            font-size: 1.1em; /* Adjust paragraph size */
+            margin-bottom: 15px;
+        }
+
+        .slide-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px; /* Larger padding for button */
+            background: #e29587; /* Button background color */
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .slide-btn:hover {
+            background: #c77b6c; /* Darker background on hover */
+        }
+
+        /* Swiper Navigation Arrows */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #fff; /* White arrows */
+            filter: drop-shadow(0 0 5px rgba(0,0,0,0.7)); /* Shadow for better visibility on bright images */
+            --swiper-navigation-size: 30px; /* Adjust arrow size */
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .slide-caption {
+                bottom: 5%; /* Closer to the bottom on small screens */
+                left: 2%;
+                width: 96%;
+                padding: 15px;
+            }
+            .slide-caption h3 {
+                font-size: 1.5em;
+            }
+            .slide-caption p {
+                font-size: 0.9em;
+            }
+            .slide-btn {
+                padding: 8px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slide-caption {
+                bottom: 2%;
+                padding: 10px;
+            }
+            .slide-caption h3 {
+                font-size: 1.2em;
+            }
+            .slide-caption p {
+                font-size: 0.8em;
+            }
+            .slide-btn {
+                font-size: 0.8em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <img src="https://media.sketchfab.com/models/eb4ba3c0d92349cfaf7361e4e55604f0/thumbnails/19abbc4d8b38401d9254b06ffd1ad81b/33a868baceb64b7abc450a5665fed7a5.jpeg" alt="클레 3D">
+                <div class="slide-caption">
+                    <h3>3D 모델링 - 클레</h3>
+                    <p>원신의 캐릭터 클레를 3D 모델링으로 구현했습니다.</p>
+                    <a href="https://sketchfab.com/3d-models/genshin-impact-klee-3d-model-eb4ba3c0d92349cfaf7361e4e55604f0" target="_blank" class="slide-btn">자세히 보기</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="https://upload-os-bbs.hoyolab.com/upload/2024/08/26/190738668/99d97fb7245506f3b79edd7aa92191d7_4409383259923876732.jpg?x-oss-process=image%2Fresize%2Cs_1000%2Fauto-orient%2C0%2Finterlace%2C1%2Fformat%2Cwebp%2Fquality%2Cq_70" alt="SD 일러스트">
+                <div class="slide-caption">
+                    <h3>SD 일러스트</h3>
+                    <p>프로필용 고화질 SD 일러스트 작품입니다.</p>
+                    <a href="#" class="slide-btn">자세히 보기</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <img src="https://ac-p3.namu.la/20211224s1/2d8af9790910904c89f73c4d76c5cce64dd5f0d2c54f3259d99d546eb19f2282.mp4.gif?expires=1750414793&key=L4GMNN91O4WXCvuWKBu-4Q" alt="V-tuber 모델링">
+                <div class="slide-caption">
+                    <h3>V-tuber 전용 모델링</h3>
+                    <p>방송 및 굿즈 제작에 활용 가능한 V-tuber 전용 고품질 모델링입니다.</p>
+                    <a href="#" class="slide-btn">자세히 보기</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <script src="https://ac-p3.namu.la/20211224s1/2d8af9790910904c89f73c4d76c5cce64dd5f0d2c54f3259d99d546eb19f2282.mp4.gif?expires=1750415621&key=R7aPgaDPIDzQI8Cni1e1oA"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            autoplay: {
+                delay: 4000, // 4 seconds delay for autoplay
+                disableOnInteraction: false, // Continue autoplay even after user interaction
+            },
+            loop: true, // Enable loop mode for continuous sliding
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: { // Optional: Add pagination dots
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+</html> 
