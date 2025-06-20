@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>관리자 - 예시 작품 등록</title>
+  <style>
+    body {
+      font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+      background-color: #f7f7f7;
+      padding: 40px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #1e3360;
+      margin-bottom: 30px;
+    }
+    label {
+      font-weight: bold;
+      margin-top: 20px;
+      display: block;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    input[type="file"] {
+      padding: 8px;
+    }
+    button {
+      background-color: #e29587;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      margin-top: 30px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #d97b71;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>예시 작품 등록 (관리자)</h1>
+    <form>
+      <label for="type">작품 분류</label>
+      <select id="type" name="type">
+        <option value="2d">2D 모델링</option>
+        <option value="3d">3D 모델링</option>
+      </select>
+
+      <label for="title">작품명</label>
+      <input type="text" id="title" name="title" placeholder="예: SD 캐릭터 - 학교 버전" required>
+
+      <label for="desc">작품 설명</label>
+      <textarea id="desc" name="desc" rows="5" placeholder="작품 설명을 상세히 입력하세요." required></textarea>
+
+      <label for="price">가격 (₩)</label>
+      <input type="text" id="price" name="price" placeholder="예: ₩50,000~" required>
+
+      <label for="tags">태그 (쉼표로 구분)</label>
+      <input type="text" id="tags" name="tags" placeholder="예: SD, 배경포함, 귀여움">
+
+      <label for="image">썸네일 이미지 업로드</label>
+      <input type="file" id="image" name="image" accept="image/*" required>
+
+      <button type="submit">작품 등록하기</button>
+    </form>
+  </div>
+</body>
+</html>
