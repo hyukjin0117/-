@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>관리자 로그인 - Charlotte Modeling</title>
+  <style>
+    body {
+      background-color: #fff9f6;
+      font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-box {
+      background-color: #fff;
+      padding: 40px;
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #1e3360;
+      margin-bottom: 30px;
+    }
+
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #1e3360;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .login-btn:hover {
+      background-color: #16284a;
+    }
+
+    .footer-links {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a {
+      color: #e29587;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>관리자 로그인</h2>
+
+    <!-- ✅ 여기만 남기고 위 form은 삭제 -->
+    <form onsubmit="event.preventDefault(); window.location.href='https://hyukjin0117.github.io/-/dash.html';">
+      <input type="text" name="adminId" placeholder="관리자 아이디" required />
+      <input type="password" name="adminPassword" placeholder="비밀번호" required />
+      <button class="login-btn" type="submit">로그인</button>
+    </form>
+
+    <div class="footer-links">
+      <a href="https://hyukjin0117.github.io/-/find%20pw.html">비밀번호를 잊으셨나요?</a>
+    </div>
+  </div>
+</body>
+</html>
