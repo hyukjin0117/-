@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>의뢰 상세 요청서 - Charlotte Modeling Admin</title>
+  <style>
+    body {
+      font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+      background-color: #fff9f6;
+      padding: 40px;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #1e3360;
+      margin-bottom: 30px;
+    }
+    .field {
+      margin-bottom: 20px;
+    }
+    .field label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 6px;
+      color: #333;
+    }
+    .field input,
+    .field textarea,
+    .field select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    .field img {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 8px;
+    }
+    button {
+      background-color: #e29587;
+      color: white;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      display: block;
+      margin: 30px auto 0;
+    }
+    button:hover {
+      background-color: #d3786e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>의뢰 상세 요청서</h1>
+
+    <div class="field">
+      <label>의뢰자 이름</label>
+      <input type="text" value="홍길동" disabled />
+    </div>
+
+    <div class="field">
+      <label>이메일</label>
+      <input type="email" value="hong123@email.com" disabled />
+    </div>
+
+    <div class="field">
+      <label>요청 항목</label>
+      <input type="text" value="2D 상반신 일러스트" disabled />
+    </div>
+
+    <div class="field">
+      <label>요청 상세 설명</label>
+      <textarea rows="6" disabled>캐릭터는 활발한 성격, 붉은 계열 의상. 트위치 프로필용으로 사용할 예정입니다.</textarea>
+    </div>
+
+    <div class="field">
+      <label>옵션 선택</label>
+      <input type="text" value="리깅 없음 / 배경 없음" disabled />
+    </div>
+
+    <div class="field">
+      <label>첨부 이미지</label>
+      <img src="" alt="참고 이미지">
+    </div>
+
+    <div class="field">
+      <label>진행 상태 변경</label>
+      <select>
+        <option selected>확인됨</option>
+        <option>작업중</option>
+        <option>완료</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label>관리자 메모</label>
+      <textarea rows="3" placeholder="내부 참고 사항 메모 가능"></textarea>
+    </div>
+
+    <button>진행 상태 저장</button>
+  </div>
+</body>
+</html>

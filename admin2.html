@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>관리자 메인 - Charlotte Modeling</title>
+  <style>
+    body {
+      font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+      background-color: #fff9f6;
+      margin: 0;
+      padding: 60px 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #1e3360;
+      margin-bottom: 40px;
+    }
+    .dashboard {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .card {
+      width: 250px;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+    .card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+      background-color: #fdf4f1;
+    }
+    .card h2 {
+      color: #e29587;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+    .card p {
+      color: #555;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1> 관리자 대시보드</h1>
+    <div class="dashboard">
+      
+      <!-- 예시 작품 등록 -->
+      <a class="card" href="/admin-register.html">
+        <h2>🎨 예시 작품 등록</h2>
+        <p>2D/3D/굿즈 항목을 등록하거나 수정합니다.</p>
+      </a>
+
+      <!-- 의뢰 진행 리스트 -->
+      <a class="card" href="/admin-request-list.html">
+        <h2>📋 의뢰 진행 현황</h2>
+        <p>모든 의뢰의 현재 진행 상태를 확인하고 변경합니다.</p>
+      </a>
+
+      <!-- 상세 요청서 직접 확인 -->
+      <a class="card" href="/admin-request-detail.html">
+        <h2>🔍 의뢰 상세 요청서</h2>
+        <p>개별 요청서 내용을 자세히 확인합니다.</p>
+      </a>
+
+    </div>
+  </div>
+
+</body>
+</html>

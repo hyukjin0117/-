@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>굿즈 제작 의뢰 - Charlotte Modeling</title>
+  <style>
+    body {
+      font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+      background-color: #fff9f6;
+      padding: 40px;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #1e3360;
+      margin-bottom: 30px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 20px;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #e29587;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      margin-top: 30px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #d57e74;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>굿즈 제작 의뢰</h1>
+    <form>
+      <label for="name">의뢰자 이름</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">이메일 주소</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="type">굿즈 종류</label>
+      <select id="type" name="type">
+        <option value="acrylic">아크릴 키링</option>
+        <option value="figure">3D 피규어</option>
+        <option value="sticker">스티커</option>
+        <option value="postcard">엽서</option>
+        <option value="other">기타</option>
+      </select>
+
+      <label for="quantity">수량</label>
+      <input type="number" id="quantity" name="quantity" placeholder="예: 100" />
+
+      <label for="desc">디자인 설명 / 요청사항</label>
+      <textarea id="desc" name="desc" rows="6" placeholder="제작할 굿즈 디자인, 방향, 포장 요청 등 작성해주세요." required></textarea>
+
+      <label for="file">참고 이미지 업로드</label>
+      <input type="file" id="file" name="file" accept="image/*" />
+
+      <label for="budget">예상 단가 / 예산</label>
+      <input type="text" id="budget" name="budget" placeholder="예: ₩500~₩1,000 단가 예상" />
+
+      <label for="deadline">희망 제작 완료일</label>
+      <input type="date" id="deadline" name="deadline" />
+
+      <button type="submit">의뢰 접수하기</button>
+    </form>
+  </div>
+</body>
+</html>

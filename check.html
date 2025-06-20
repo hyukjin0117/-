@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>의뢰 진행 관리 - Charlotte Modeling Admin</title>
+  <style>
+    body {
+      font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+      background-color: #fff9f6;
+      padding: 40px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #1e3360;
+      margin-bottom: 30px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+    }
+    th {
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    select, textarea {
+      padding: 6px;
+      width: 100%;
+      font-size: 0.9rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      padding: 8px 18px;
+      border: none;
+      background-color: #e29587;
+      color: white;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #d3786e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>의뢰 진행도 관리</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>의뢰자</th>
+          <th>요청 항목</th>
+          <th>날짜</th>
+          <th>진행 상태</th>
+          <th>관리자 메모</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>홍길동</td>
+          <td>2D 상반신 일러스트</td>
+          <td>2025-05-01</td>
+          <td>진행중</td>
+          <td><textarea rows="2" placeholder="클라이언트가 특정 포즈 요청함"></textarea></td>
+          
+        </tr>
+        <tr>
+          <td>김예린</td>
+          <td>굿즈 제작 - 스티커</td>
+          <td>2025-04-30</td>
+          <td>미확인</td>
+          <td><textarea rows="2"></textarea></td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>V-Tuber 3D 캐릭터 의뢰 폼 - Charlotte Modeling</title>
+  <style>
+    body {
+      font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+      background-color: #fff9f6;
+      padding: 40px;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #1e3360;
+      margin-bottom: 30px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 20px;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #e29587;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      margin-top: 30px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #d57e74;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>모델링 제작 의뢰</h1>
+    <form>
+      <label for="name">의뢰자 이름</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">이메일 주소</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="desc">캐릭터 설명 및 요청사항</label>
+      <textarea id="desc" name="desc" rows="6" placeholder="성격, 복장, 머리색, 방송 스타일 등 상세히 작성해주세요." required></textarea>
+
+      <label for="options">옵션 선택</label>
+      <select id="options" name="options">
+        <option value="basic">2D 모델링 </option>
+        <option value="rigged">3D 모델링 (움직임 미포함)</option>
+        <option value="rigged">3D 모델링 (움직임 포함)</option>
+        <option value="vrm">V-TUBER 모델링(표정,움직임,특수효과 등)</option>
+      </select>
+
+      <label for="budget">예상 예산 (₩)</label>
+      <input type="number" id="budget" name="budget" placeholder="예: 250000" />
+
+      <label for="deadline">희망 납기일</label>
+      <input type="date" id="deadline" name="deadline" />
+
+      <label for="file">참고 이미지 업로드</label>
+      <input type="file" id="file" name="file" accept="image/*" />
+
+      <button type="submit">의뢰 접수하기</button>
+    </form>
+  </div>
+</body>
+</html>

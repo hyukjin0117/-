@@ -1,0 +1,35 @@
+!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Charlotte Modeling - 메인</title>
+  <style>
+    body {
+      font-family: 'Pretendard', sans-serif;
+      background: #fff9f6;
+      text-align: center;
+      padding: 60px;
+    }
+    #logo {
+      width: 200px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔹 로고 이미지 -->
+  <img id="logo" src="logo.png" alt="Charlotte Modeling Logo" />
+
+  <script>
+    document.getElementById('logo').addEventListener('dblclick', function () {
+      // 관리자 페이지로 이동
+      window.location.href = "/admin-portal.html"; // 실제 경로에 맞게 수정
+    });
+  </script>
+
+  <h1>Welcome to Charlotte Modeling</h1>
+  <p>2D & 3D Modeling / Goods Custom Service</p>
+
+</body>
+</html>
